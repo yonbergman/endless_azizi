@@ -11,6 +11,8 @@ var toHHMMSS = function (sec_num) {
 }
 
 $(document).ready(function() {
+	$("audio")[0].play();
+	
 	var startTime = Date.now();
 	var timerEl = $('.timer');
 	setInterval(function(){
