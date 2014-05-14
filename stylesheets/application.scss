@@ -1,16 +1,113 @@
 @import "compass/reset";
 @import "compass/utilities";
 @import "compass/css3";
+@import "compass/css3/transform";
+@import "animate";
+
+@include keyframes(shout) {
+  0%   {top: 0;}
+  20%  {top: 19px;}
+  100% {top: 20px;}
+}
+
+@include keyframes(bob) {
+  0% {top: 5px;}
+  100%: {top: 15px;}
+}
+
+@include keyframes(rotateHead) {
+  0% {@include rotateZ(0deg);}
+  25% {@include rotateZ(-5deg);}
+  75% {@include rotateZ(5deg);}
+  100% {@include rotateZ(0deg);}
+}
+
 
 body {
   font: 62.5% Arial, Helvetica, sans-serif;
-  background: #fff;
+  background: #FFF;
   color: #0d0d0d;
   padding: 50px;
+  color: white;
+
+  .background{
+    @include background-image(image-url('bg.jpg'));
+    background-repeat: no-repeat;
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: 50% 100%;
+    @include filter(blur(5px));
+    @include translate3d(0 0 0);
+    opacity: 0.8;
+  }
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 10em;
+  font-weight: normal;
   text-align: center;
+  @include text-shadow(0 2px 0 black);
+  margin-bottom: 10px;
+}
+
+.timer{
+  font-size: 4em;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 10px;
+
+  width: 300px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  @include border-radius(3px);
+  // border-radius: 20px;
+  @include text-shadow(0 1px 0 black);
+  @include box-shadow(0 1px black);
+}
+
+.azizi{
+
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  @include background-image(image-url('body.gif'));
+  background-size: 100%;
+  width: 338px;
+  height: 600px;
+}
+.head{
+  @include background-image(image-url('head.png'));
+  background-size: 168px 227px;
+  width: 168px;
+  height: 227px;
+  position: absolute;
+  top: 5px;
+  left: 70px;
+
+  @include animation(bob 2s ease-in-out infinite alternate, rotateHead 10s infinite);
+
+  .mouth{
+    @include background-image(image-url('mouth.png'));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left:0;
+    top: 0;
+
+    @include animation-name(shout);
+    @include animation-duration(2s);
+    @include animation-timing-function(ease-out);
+    @include animation-delay(1s);
+    @include animation-iteration-count(infinite);
+    @include animation-direction(alternate);
+    @include animation-play-state(running);
+
+  }
+
 }

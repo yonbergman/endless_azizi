@@ -1,1 +1,413 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}body{font:62.5% Arial, Helvetica, sans-serif;background:#fff;color:#0d0d0d;padding:50px}h1{font-size:3em;font-weight:bold;text-align:center}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@-webkit-keyframes shout {
+  0% {
+    top: 0;
+  }
+
+  20% {
+    top: 19px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@-moz-keyframes shout {
+  0% {
+    top: 0;
+  }
+
+  20% {
+    top: 19px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@-ms-keyframes shout {
+  0% {
+    top: 0;
+  }
+
+  20% {
+    top: 19px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@keyframes shout {
+  0% {
+    top: 0;
+  }
+
+  20% {
+    top: 19px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@-webkit-keyframes bob {
+  0% {
+    top: 5px;
+  }
+
+  100% {
+    top: 15px;
+  }
+}
+
+@-moz-keyframes bob {
+  0% {
+    top: 5px;
+  }
+
+  100% {
+    top: 15px;
+  }
+}
+
+@-ms-keyframes bob {
+  0% {
+    top: 5px;
+  }
+
+  100% {
+    top: 15px;
+  }
+}
+
+@keyframes bob {
+  0% {
+    top: 5px;
+  }
+
+  100% {
+    top: 15px;
+  }
+}
+
+@-webkit-keyframes rotateHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes rotateHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes rotateHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+body {
+  font: 62.5% Arial, Helvetica, sans-serif;
+  background: #FFF;
+  color: #0d0d0d;
+  padding: 50px;
+  color: white;
+}
+body .background {
+  background-image: url('/images/bg.jpg?1337154126');
+  background-repeat: no-repeat;
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  z-index: -1;
+  width: 110%;
+  height: 110%;
+  background-size: cover;
+  background-position: 50% 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: translate3d(0 0 0, 1em, 1em);
+  -moz-transform: translate3d(0 0 0, 1em, 1em);
+  -ms-transform: translate3d(0 0 0, 1em, 1em);
+  -o-transform: translate3d(0 0 0, 1em, 1em);
+  transform: translate3d(0 0 0, 1em, 1em);
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 10em;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 2px 0 black;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 4em;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 10px;
+  width: 300px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 black;
+  -webkit-box-shadow: 0 1px black;
+  -moz-box-shadow: 0 1px black;
+  box-shadow: 0 1px black;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.azizi {
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  background-image: url('/images/body.gif?1400081597');
+  background-size: 100%;
+  width: 338px;
+  height: 600px;
+}
+
+.head {
+  background-image: url('/images/head.png?1400076403');
+  background-size: 168px 227px;
+  width: 168px;
+  height: 227px;
+  position: absolute;
+  top: 5px;
+  left: 70px;
+  -webkit-animation: bob 2s ease-in-out infinite alternate, rotateHead 10s infinite;
+  -moz-animation: bob 2s ease-in-out infinite alternate, rotateHead 10s infinite;
+  -ms-animation: bob 2s ease-in-out infinite alternate, rotateHead 10s infinite;
+  -o-animation: bob 2s ease-in-out infinite alternate, rotateHead 10s infinite;
+  animation: bob 2s ease-in-out infinite alternate, rotateHead 10s infinite;
+}
+.head .mouth {
+  background-image: url('/images/mouth.png?1400076409');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation-name: shout;
+  -moz-animation-name: shout;
+  -ms-animation-name: shout;
+  -o-animation-name: shout;
+  animation-name: shout;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
