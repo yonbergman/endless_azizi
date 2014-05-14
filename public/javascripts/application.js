@@ -71,14 +71,13 @@ var isReady = function(){
 
 $(document).ready(function() {
 	addSpinner();
-	interval = setInterval(function(){
-		if (isReady){
-				clearInterval(interval);
-				if (isMobile()){
-					showMobileScreen();
-				} else {
-					startShouting();
-				}
-		}
-	}, 20);
+  var audioElement = $("audio")[0];
+  audioElement.addEventListener("loadeddata", function() {
+    if (isMobile()){
+      showMobileScreen();
+    } else {
+      startShouting();
+    }
+  }, true);
+  audioElement.load();
 });
