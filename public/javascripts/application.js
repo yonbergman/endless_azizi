@@ -37,9 +37,9 @@ var isMobile = function(){
 var showMobileScreen = function(){
 	$('.mobileScreen').show().on('click', function(){
 		$('.mobileScreen').fadeOut();
-		startShouting();
+		startLoading();
 	});
-	$(".loading").fadeOut();
+	$(".loading").hide();
 }
 
 var startShouting = function(){
@@ -69,15 +69,20 @@ var isReady = function(){
 	return ($("audio")[0].readyState == 4);
 }
 
-$(document).ready(function() {
-	addSpinner();
+var startLoading = function(){
+  $(".loading").show();
+  addSpinner();
   var audioElement = $("audio")[0];
   audioElement.addEventListener("loadeddata", function() {
-    if (isMobile()){
-      showMobileScreen();
-    } else {
-      startShouting();
-    }
+    startShouting();
   }, true);
   audioElement.load();
+}
+$(document).ready(function() {
+  if (isMobile()){
+    showMobileScreen();
+  } else {
+    startLoading();
+  }
+
 });
