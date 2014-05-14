@@ -341,7 +341,6 @@ h1 {
   -webkit-box-shadow: 0 1px black;
   -moz-box-shadow: 0 1px black;
   box-shadow: 0 1px black;
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .azizi {
@@ -352,6 +351,11 @@ h1 {
   background-size: 100%;
   width: 338px;
   height: 600px;
+  -webkit-animation: bob 3s linear infinite alternate;
+  -moz-animation: bob 3s linear infinite alternate;
+  -ms-animation: bob 3s linear infinite alternate;
+  -o-animation: bob 3s linear infinite alternate;
+  animation: bob 3s linear infinite alternate;
 }
 
 .head {

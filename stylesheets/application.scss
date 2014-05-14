@@ -80,6 +80,7 @@ h1 {
   background-size: 100%;
   width: 338px;
   height: 600px;
+  @include animation(bob 3s linear infinite alternate);
 }
 .head{
   @include background-image(image-url('head.png'));
