@@ -7,12 +7,18 @@
     %meta{:name => 'description', :content => ' בואו לראות כמה זמן תוכלו להחזיק מעמד עם הצועק מתל-אביב.'}
     %link{:href=>'/stylesheets/application.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
     %script{:type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
+    %script{src: "//cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.0/spin.min.js", type: "text/javascript"}
     %script{:type => "text/javascript", :src => "/javascripts/application.js"}
     %link{href: "/images/favicon.png", rel: "icon", type: "image/png"}
     %meta{content: "הצועק | כמה זמן תוכלו להחזיק מעמד?", property: "og:title"}
     %meta{content: "/images/fb_og.png", property: "og:image"}
-
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}
 
   %body
     .background
-    = yield
+    .loading
+    .mobileScreen{:style => 'display:none;'}
+      %h1 הצועק
+      .btn לחץ כאן כדי להתחיל
+    .content{:style => 'display: none;'}
+      = yield

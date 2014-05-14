@@ -10,9 +10,8 @@ var toHHMMSS = function (sec_num) {
     return time;
 }
 
-$(document).ready(function() {
-	$("audio")[0].play();
-	
+
+var startTimer = function(){
 	var startTime = Date.now();
 	var timerEl = $('.timer');
 	setInterval(function(){
@@ -20,13 +19,66 @@ $(document).ready(function() {
 		var seconds = time / 1000;
 		timerEl.text(toHHMMSS(Math.floor(time/1000)));
 	}, 10)
+}
 
+var startAudio = function(){
+	$("audio")[0].play();
+}
 
-	// Open external links in a new window
-	hostname = window.location.hostname
-	$("a[href^=http]")
-	  .not("a[href*='" + hostname + "']")
-	  .addClass('link external')
-	  .attr('target', '_blank');
+var hideLoading = function(){
+	$('.content').show();
+	$(".loading").fadeOut();
+}
 
+var isMobile = function(){
+	return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+}
+
+var showMobileScreen = function(){
+	$('.mobileScreen').show().on('click', function(){
+		$('.mobileScreen').fadeOut();
+		startShouting();
+	});
+	$(".loading").fadeOut();
+}
+
+var startShouting = function(){
+	startAudio();
+	startTimer();
+	hideLoading();
+}
+
+var addSpinner = function(){
+	var opts = {
+	  lines: 14, // The number of lines to draw
+	  length: 40, // The length of each line
+	  width: 9, // The line thickness
+	  radius: 40, // The radius of the inner circle
+	  corners: 0.5, // Corner roundness (0..1)
+	  rotate: 0, // The rotation offset
+	  direction: 1, // 1: clockwise, -1: counterclockwise
+	  color: '#fff', // #rgb or #rrggbb or array of colors
+	  speed: 0.6, // Rounds per second
+	  trail: 40, // Afterglow percentage
+	};
+	var target = $('.loading')[0];
+	var spinner = new Spinner(opts).spin(target);
+}
+
+var isReady = function(){
+	return ($("audio")[0].readyState == 4);
+}
+
+$(document).ready(function() {
+	addSpinner();
+	interval = setInterval(function(){
+		if (isReady){
+				clearInterval(interval);
+				if (isMobile()){
+					showMobileScreen();
+				} else {
+					startShouting();
+				}
+		}
+	}, 20);
 });
